@@ -20,3 +20,23 @@ brew install opencv
 
 ---
 
+pkg-config install & Linker Flag 추출
+*Linker Flag 는 xcode에게 라이브러리를 참조하라고 하는 것입니다.
+~~~
+brew install pkg-config
+~~~
+
+설치 했으니 이제 Lingker Flag를 알아내봅니다.
+~~~
+pkg-config --cflags --libs opencv4
+~~~
+
+Xcode
+> Header Search Paths 에
+~~~
+/usr/local/include
+~~~
+> Library Search Paths 에
+~~~
+/usr/local/lib
+~~~
